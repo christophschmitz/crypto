@@ -1,0 +1,25 @@
+.card {
+  background: #3c3e44;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: auto 1fr;
+  grid-gap: 1em;
+  border-radius: 1em;
+  height: 13em;
+}
+
+.cardImage {
+  height: 25px;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+
+.cardInfo {
+  text-align: center;
+  display: grid;
+  padding: 1em;
+}
+
+.cardInfo * {
+  margin: 0;
+}

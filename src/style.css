@@ -1,8 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #fff;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background: #24282f;
+  height: 100%;
+}
+
+.characterContainer {
+  padding: 2em;
+  grid-gap: 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
