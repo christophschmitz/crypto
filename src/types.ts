@@ -5,7 +5,7 @@ export type Coin = {
   price: string;
 };
 
-export type CoinFromAPI = {
+export type CoinFromApi = {
   id: string;
   icon: string;
   name: string;
