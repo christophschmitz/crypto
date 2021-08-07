@@ -1,11 +1,14 @@
 .card {
-  background: #3c3e44;
+  background-color: #2b2a2d;
   display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: auto 1fr;
-  grid-gap: 1em;
-  border-radius: 1em;
-  height: 13em;
+  grid-template-rows: 1fr auto;
+  border-radius: 0.3em;
+  border: 1px solid rgb(58, 58, 58);
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: 0.5s;
 }
 
 .cardImage {
@@ -17,7 +20,6 @@
 .cardInfo {
   text-align: center;
   display: grid;
-  padding: 1em;
 }
 
 .cardInfo * {
