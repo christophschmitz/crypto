@@ -6,7 +6,7 @@ export type Coins = {
   price: number;
 };
 
-export type CoinFromApi = {
+export type Coin = {
   id: string;
   icon: string;
   name: string;
@@ -24,4 +24,7 @@ export type CoinFromApi = {
   websiteUrl: string;
   twitterUrl: string;
   exp: string[];
+};
+export type CoinFromApi = {
+  coins: Coin[];
 };
