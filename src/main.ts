@@ -2,6 +2,9 @@ import './style.css';
 import { createCoinCard } from './components/coins/coin';
 import { createElement } from './utils/createElement';
 import { Coins } from './types';
+import { getCoins } from './utils/api';
+
+getCoins();
 
 const coins: Coins[] = [
   {
