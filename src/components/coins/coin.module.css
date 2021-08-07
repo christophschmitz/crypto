@@ -17,11 +17,14 @@
 .cardImage {
   justify-self: center;
   align-self: center;
+  max-width: 4em;
+  grid-column-start: 1;
 }
 
 .cardInfo {
   text-align: left;
-  padding-left: 2em;
+  padding-left: 1em;
+  grid-column-start: 2;
 }
 
 .cardInfo * {
@@ -32,6 +35,7 @@
   grid-row-start: 0;
   text-transform: capitalize;
   padding-bottom: 0.5em;
+  font-size: 1.2rem;
 }
 
 .subheading {
@@ -39,4 +43,17 @@
 }
 .cardText {
   padding: 0.1em;
+}
+
+.number {
+  position: absolute;
+  z-index: 1000;
+  transform: translate(-90%, -90%);
+  border-radius: 50%;
+  background: #fff;
+  padding: 0.5em;
+  width: 50px;
+  height: 50px;
+  -webkit-box-shadow: 5px 5px 42px 1px rgba(209, 209, 209, 0.42);
+  box-shadow: 5px 5px 42px 1px rgba(209, 209, 209, 0.42);
 }

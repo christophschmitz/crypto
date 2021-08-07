@@ -3,6 +3,7 @@ import { createElement } from '../../utils/createElement';
 import { Coins } from '../../types';
 
 export function createCoinCard({
+  rank,
   icon,
   name,
   symbol,
@@ -14,6 +15,15 @@ export function createCoinCard({
       createElement('img', {
         className: styles.cardImage,
         src: icon,
+      }),
+      createElement('div', {
+        className: styles.number,
+        childElements: [
+          createElement('h2', {
+            className: styles.rank,
+            innerText: rank,
+          }),
+        ],
       }),
       createElement('article', {
         className: styles.cardInfo,
@@ -37,10 +47,14 @@ export function createCoinCard({
           }),
           createElement('p', {
             className: styles.cardText,
-            innerText: price + ' €',
+            innerText: price.toFixed(2) + ' €',
           }),
         ],
       }),
     ],
   });
 }
+// createElement('p', {
+//   className: styles.cardText,
+//   innerText: price + ' €',
+// }),
