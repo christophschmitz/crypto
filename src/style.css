@@ -5,6 +5,7 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
 }
 
@@ -64,4 +65,40 @@ header {
 .herotext {
   padding-left: 2em;
   text-align: left;
+}
+
+.topBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1em 3em;
+  align-items: center;
+  margin: auto;
+}
+
+.logo {
+  justify-self: start;
+}
+
+input {
+  background-color: #fff;
+  border: none;
+  font-size: 1rem;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.5em;
+}
+input:focus {
+  outline: 1px solid #dadada;
+  border-radius: 0.5em;
+}
+
+@media (max-width: 750px) {
+  .topBar {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .logo {
+    justify-self: center;
+    font-size: 1.5rem;
+    padding: 1em 0;
+  }
 }
