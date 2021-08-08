@@ -6,6 +6,19 @@ import { getCoins } from './utils/api';
 
 const coins: Coins[] = await getCoins();
 
+const topbar = createElement('div', {
+  className: 'topBar',
+  childElements: [
+    createElement('h1', {
+      className: 'logo',
+      innerText: 'COINOLOGIC',
+    }),
+    createElement('input', {
+      placeholder: 'Search your Favourite asset...',
+    }),
+  ],
+});
+
 const header = createElement('header', {
   childElements: [
     createElement('div', {
@@ -17,7 +30,7 @@ const header = createElement('header', {
         }),
         createElement('p', {
           className: 'herotext',
-          innerText: 'Invest in a better future',
+          innerText: 'Invest into a better future',
         }),
       ],
     }),
@@ -32,4 +45,6 @@ const mainElement = createElement('main', {
     }),
   ],
 });
-document.querySelector<HTMLDivElement>('#app')?.append(header, mainElement);
+document
+  .querySelector<HTMLDivElement>('#app')
+  ?.append(topbar, header, mainElement);
