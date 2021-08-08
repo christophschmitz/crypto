@@ -17,7 +17,7 @@ const header = createElement('header', {
         }),
         createElement('p', {
           className: 'herotext',
-          innerText: 'Watch your coins',
+          innerText: 'Invest in a better future',
         }),
       ],
     }),
