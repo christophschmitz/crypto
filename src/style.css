@@ -1,8 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #323232;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
+}
+
+.coinContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 0 3em 3em 3em;
+  grid-gap: 3em;
+  margin: auto;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 3em;
+  margin: auto;
+}
+.hero {
+  background: linear-gradient(
+      60deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 1)
+    ),
+    url(https://images.pexels.com/photos/6120182/pexels-photo-6120182.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: cover;
+  height: 35vh;
+  border-radius: 0.3em;
+  -webkit-box-shadow: 5px 5px 42px 1px rgba(209, 209, 209, 0.42);
+  box-shadow: 5px 5px 42px 1px rgba(209, 209, 209, 0.42);
+}
+
+.heroheading {
+  font-size: 2em;
+  padding: 2rem 2rem 0 2rem;
+  text-align: left;
+}
+
+.herotext {
+  padding-left: 2em;
+  text-align: left;
+}
+
+.topBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1em 3em;
+  align-items: center;
+  margin: auto;
+}
+
+.logo {
+  justify-self: start;
+}
+
+input {
+  background-color: #fff;
+  border: none;
+  font-size: 1rem;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.5em;
+}
+input:focus {
+  outline: 1px solid #dadada;
+  border-radius: 0.5em;
+}
+
+@media (max-width: 750px) {
+  .topBar {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .logo {
+    justify-self: center;
+    font-size: 1.5rem;
+    padding: 1em 0;
+  }
 }

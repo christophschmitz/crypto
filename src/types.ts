@@ -1,0 +1,31 @@
+export type Coins = {
+  name: string;
+  icon: string;
+  symbol: string;
+  rank: number;
+  price: number;
+  priceChange1d: number;
+};
+
+export type Coin = {
+  id: string;
+  icon: string;
+  name: string;
+  symbol: string;
+  rank: number;
+  price: number;
+  priceBTC: number;
+  volume: number;
+  marketCap: number;
+  availableSupply: number;
+  totalSupply: number;
+  priceChange1h: number;
+  priceChange1d: number;
+  priceChange1w: number;
+  websiteUrl: string;
+  twitterUrl: string;
+  exp: string[];
+};
+export type CoinFromApi = {
+  coins: Coin[];
+};
