@@ -45,6 +45,11 @@
   padding: 0.1em;
 }
 
+.cardTextChange {
+  padding: 0.1em;
+  color: green;
+}
+
 .number {
   position: absolute;
   z-index: 1000;

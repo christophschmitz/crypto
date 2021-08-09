@@ -4,6 +4,7 @@ export type Coins = {
   symbol: string;
   rank: number;
   price: number;
+  priceChange1d: number;
 };
 
 export type Coin = {

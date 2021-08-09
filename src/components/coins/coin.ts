@@ -8,6 +8,7 @@ export function createCoinCard({
   name,
   symbol,
   price,
+  priceChange1d,
 }: Coins): HTMLElement {
   return createElement('div', {
     className: styles.card,
@@ -48,6 +49,14 @@ export function createCoinCard({
           createElement('p', {
             className: styles.cardText,
             innerText: price.toFixed(2) + ' €',
+          }),
+          createElement('h5', {
+            className: styles.subheading,
+            innerText: 'Pricechange 24h:',
+          }),
+          createElement('p', {
+            className: styles.cardText,
+            innerText: priceChange1d + '%',
           }),
         ],
       }),

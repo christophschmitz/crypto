@@ -14,6 +14,7 @@ export async function getCoins(): Promise<Coins[]> {
       symbol: coins.symbol,
       rank: coins.rank,
       price: coins.price,
+      priceChange1d: coins.priceChange1d,
     };
     return formattedCoins;
   });

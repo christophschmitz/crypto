@@ -15,6 +15,7 @@ const topbar = createElement('div', {
     }),
     createElement('input', {
       placeholder: 'Search your Favourite asset...',
+      id: 'searchBar',
     }),
   ],
 });
