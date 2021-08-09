@@ -21,7 +21,6 @@ export function createCoinCard({
         className: styles.number,
         childElements: [
           createElement('h2', {
-            className: styles.rank,
             innerText: rank,
           }),
         ],
