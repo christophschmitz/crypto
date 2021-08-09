@@ -4,48 +4,52 @@ import { createElement } from './utils/createElement';
 import { Coins } from './types';
 import { getCoins } from './utils/api';
 
-const coins: Coins[] = await getCoins();
+async function run() {
+  const coins: Coins[] = await getCoins();
 
-const topbar = createElement('div', {
-  className: 'topBar',
-  childElements: [
-    createElement('h1', {
-      className: 'logo',
-      innerText: 'COINOLOGIC',
-    }),
-    createElement('input', {
-      placeholder: 'Search your Favourite asset...',
-      id: 'searchBar',
-    }),
-  ],
-});
+  const topbar = createElement('div', {
+    className: 'topBar',
+    childElements: [
+      createElement('h1', {
+        className: 'logo',
+        innerText: 'COINOLOGIC',
+      }),
+      createElement('input', {
+        placeholder: 'Search your Favourite asset...',
+        id: 'searchBar',
+      }),
+    ],
+  });
 
-const header = createElement('header', {
-  childElements: [
-    createElement('div', {
-      className: 'hero',
-      childElements: [
-        createElement('h2', {
-          className: 'heroheading',
-          innerText: 'Watch your coins',
-        }),
-        createElement('p', {
-          className: 'herotext',
-          innerText: 'Invest into a better future',
-        }),
-      ],
-    }),
-  ],
-});
+  const header = createElement('header', {
+    childElements: [
+      createElement('div', {
+        className: 'hero',
+        childElements: [
+          createElement('h2', {
+            className: 'heroheading',
+            innerText: '',
+          }),
+          createElement('p', {
+            className: 'herotext',
+            innerText: '',
+          }),
+        ],
+      }),
+    ],
+  });
 
-const mainElement = createElement('main', {
-  childElements: [
-    createElement('div', {
-      className: 'coinContainer',
-      childElements: coins.map((coins) => createCoinCard(coins)),
-    }),
-  ],
-});
-document
-  .querySelector<HTMLDivElement>('#app')
-  ?.append(topbar, header, mainElement);
+  const mainElement = createElement('main', {
+    childElements: [
+      createElement('div', {
+        className: 'coinContainer',
+        childElements: coins.map((coins) => createCoinCard(coins)),
+      }),
+    ],
+  });
+  document
+    .querySelector<HTMLDivElement>('#app')
+    ?.append(topbar, header, mainElement);
+}
+
+run();

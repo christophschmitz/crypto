@@ -1,7 +1,7 @@
 import type { CoinFromApi, Coins } from '../types';
 export async function getCoins(): Promise<Coins[]> {
   const response = await fetch(
-    'https://api.coinstats.app/public/v1/coins?skip=0&limit=56&currency=EUR'
+    'https://api.coinstats.app/public/v1/coins?=EUR/'
   );
 
   const data: CoinFromApi = await response.json();
